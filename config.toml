@@ -30,7 +30,6 @@ pygmentscodefencesguesssyntax = true
     rtl = false
 
     math = false
-    custom_css = ["css/custom.css"]
 
 # Social links
 [[params.social]]
