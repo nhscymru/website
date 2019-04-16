@@ -23,7 +23,7 @@ googleAnalytics = "UA-97389603-2"
     github = "https://github.com/nhscymru/"
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
-
+    email = "mark@wardle.org"
     footercontent = "Maintained by Mark Wardle for the Welsh Technical Standards Board"
 
     hidecredits = true
