@@ -1,14 +1,11 @@
 ---
-title: "Welsh Technical Standards Board"
+title: "Terms of reference"
 date: 2019-02-10T21:07:36Z
-draft: true
 ---
-
-# Welsh Technical Standards Board (WTSB) Terms of Reference
 
 
 ### Purpose
-The purpose of the Welsh Technical Standards Board (WTSB ’ is to support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.
+The purpose of the Welsh Technical Standards Board (WTSB) is to support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.
 
 The scope of this Board covers:
 
@@ -34,7 +31,7 @@ The WTSB is responsible for the following (in line with its agreed scope):
 
 ### Governance
 
-The WTSB would report to the NHS Wales Informatics Management Board (NIMB).
+The WTSB reports to the NHS Wales Informatics Management Board (NIMB).
 
 The WTSB may decide to establish temporary working groups to take forward specific packages of work. These groups may be jointly established by WTSB and the Wales Information Standards Board (WISB).
 
@@ -53,19 +50,28 @@ To ensure alignment between the WTSB and the Wales Information Standards Board (
 
 ### Current membership
 
-* Mark Wardle (Chair)	Consultant Neurologist, Cardiff and Vale University Health Board
-* Rob Jones (Deputy Chair)	Head of Applications Design,  NHS Wales Informatics Service
-* James Chess	Chief Medical Information Officer, Abertawe Bro Morgannwg University Health Board
-* Ann Wrightson	Head of Information Architecture, Aneurin Bevan University Health Board
-* Gary Bullock	Director of Application Development and Support , NHS Wales Informatics Services
-* Mark Frayne, Lead Applications Architect, NHS Wales Informatics Service
-* Liz Cook	Head of Digital Development, Welsh Government
-* Matt John	Assistant Director of Informatics, Abertawe Bro Morgannwg University Health Board
-* Andrew Nelson	Assistant Director of Informatics, Cardiff and Vale University Health Board
+* Gary Bullock,	Director of Application Development and Support , NHS Wales Informatics Services (NWIS)
+* Mark Coleman, Welsh Government
+* James Chess,	Chief Medical Information Officer, Abertawe Bro Morgannwg University Health Board
 * Phil Clee 	Information Technology, Cardiff and Vale University Health Board
-* Tom Crick	Professor of Computer Science & Public Policy, Swansea University
+* Lee Coates, Enterprise architect, Cardiff County Council
+* Tom Crick,	Professor of Computer Science & Public Policy, Swansea University
+* Mark Frayne, Lead Applications Architect, NHS Wales Informatics Service
+* Ian John, Neath Port Talbot County Council
+* Matt John,	Assistant Director of Informatics, Abertawe Bro Morgannwg University Health Board
+* Rob Jones (Deputy Chair)	Head of Applications Design,  NHS Wales Informatics Service
+* Andrew Nelson	Assistant Director of Informatics, Cardiff and Vale University Health Board
 * Matthew Perrott 	Strategic Contracts Manager, NHS Wales Informatics Services
-* Local Govt / Social Care Rep	Representative of SOCITM Wales (TBC)
+* John Peters, Consultant Endocrinologist on behalf of Welsh Information Standards Board
+* Mark Wardle (Chair)	Consultant Neurologist, Cardiff and Vale University Health Board
+* Ann Wrightson,	Head of Information Architecture, Aneurin Bevan University Health Board
+* Rebecca Cook, Head of Information Standards, NWIS on behalf of Welsh Information Standards Board
+
+
+#### Past members
+* Liz Cook, 2018-2019	Head of Digital Development, Welsh Government
+* Christopher Lloyd, ICT Transition and Applications Manager, Customer and Digital Services, Cardiff County Council
+
 
 Where a member is unable to attend, a substitute should attend Board meetings in their place. Substitutes must be at the same level as the person they are substituting for and empowered to take decisions on their behalf. 
   

@@ -1,7 +1,7 @@
 baseURL = "https://standards.cymru"
 languageCode = "en-gb"
 title = "Welsh Technical Standards Board"
-theme = "hugo-coder"
+theme = "hugo-ananke"
 defaultcontentlanguage = "en"
 
 paginate = 20
@@ -11,6 +11,7 @@ pygmentsstyle = "bw"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
+googleAnalytics = "UA-97389603-2"
 
 [params]
     title = "Welsh Technical Standards Board"
@@ -18,7 +19,8 @@ pygmentscodefencesguesssyntax = true
     description = "WTSB: Defining standards enabling integration and interoperability across all health and care systems in Wales."
     keywords = "nhswales,wtsb,technicalstandards"
     avatarurl = "nhswaleslogo.png"
-
+    twitter = "https://twitter.com/NHSWalesTech"
+    github = "https://github.com/nhscymru/"
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
 
@@ -26,7 +28,7 @@ pygmentscodefencesguesssyntax = true
 
     hidecredits = true
     hidecopyright = true
-
+    show_reading_time = true
     rtl = false
 
     math = false
