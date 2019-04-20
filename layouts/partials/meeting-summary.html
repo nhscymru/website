@@ -1,0 +1,34 @@
+{{  $minutes := print "/meetings/" (substr .File.BaseFileName 0 10) "-minutes.md" }}
+{{  $notes := print "/meetings/" (substr .File.BaseFileName 0 10) "-notes.md" }}
+
+<div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+
+    <h1 class="f4 near-black">
+      <a href="{{ .URL }}" class="link black dim">
+        {{ .Date.Format "2 Jan 2006, 15:04" }}{{ if ne .Params.enddate nil }}-{{ dateFormat "15:04" .Params.enddate }}{{ end}}
+      </a>
+    </h1>
+    {{ if ne .Params.location nil }}
+    {{ if ne .Params.postcode nil }}
+    <p><a href="https://maps.google.co.uk/maps?q={{.Params.postcode}}" target="_new">{{ .Params.location }}</a>
+      {{ else }}
+      <p>Location: {{ .Params.location   }}</p>
+      {{ end }}
+      {{ end }}
+      {{ if .Title}}
+      <p>{{ .Title }}</p>
+      {{ end }}
+      {{ if gt (len .Content) 1}}
+      <div class="nested-links f5 lh-copy nested-copy-line-height">
+        <a href="{{ .URL }}">Agenda</a>: {{ .Summary  }}
+      </div>
+      {{ end }}
+      {{ if fileExists $minutes }}
+      <p><a href="{{ref . $minutes}}">Minutes</a></p>
+      {{ end }}
+      {{ if fileExists $notes }}
+      <p><a href="{{ref . $notes}}">Notes</a></p>
+      {{ end }}
+  </div>
+</div>

@@ -1,0 +1,34 @@
+{{ define "main" }}
+<article class="pa3 pa4-ns nested-copy-line-height nested-img">
+  <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+    <!-- this includes whatever content is in the _index.md file -->
+    {{- .Content -}}
+  </section>
+
+
+  <section class="flex-ns flex-wrap justify-around mt5">
+
+    {{ range where .Pages "Type" "agenda" }}
+    {{ if gt (len .Content) 1}}
+
+    <div class="relative w-100 mb4 bg-white ba b--light-gray">
+      {{- partial "meeting-summary.html" . -}}
+    </div>
+    {{ end }}
+    {{ end }}
+  </section>
+  {{- template "_internal/pagination.html" . -}}
+
+  <h1>Planned meetings</h1>
+  <ul>
+    {{ range (where .Pages "Type" "agenda").Reverse }}
+    {{ if .Date.After now}}
+    {{ if lt (len .Content) 1}}
+    {{- partial "future-meeting-summary.html" . -}}
+    {{ end }}
+    {{ end}}
+    {{ end }}
+  </ul>
+
+</article>
+{{ end }}

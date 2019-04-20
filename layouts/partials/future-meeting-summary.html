@@ -1,0 +1,11 @@
+{{  $minutes := print "/meetings/" (substr .File.BaseFileName 0 10) "-minutes.md" }}
+{{  $notes := print "/meetings/" (substr .File.BaseFileName 0 10) "-notes.md" }}
+
+<li><a href="{{ .URL }}" class="link black dim">
+        {{ .Date.Format "2 Jan 2006, 15:04" }}{{ if ne .Params.enddate nil }}-{{ dateFormat "15:04" .Params.enddate }}{{ end}}
+
+        {{ with .Title}}
+        : {{ . }}
+        {{ end }}
+    </a>
+</li>
