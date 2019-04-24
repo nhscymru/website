@@ -19,7 +19,7 @@
   </section>
   {{- template "_internal/pagination.html" . -}}
 
-  <h1>Planned meetings</h1>
+  <h1>Other meetings</h1>
   <ul>
     {{ range .Pages.Reverse }}
     {{ if .Date.After now}}

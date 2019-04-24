@@ -12,6 +12,10 @@ pygmentscodefencesguesssyntax = true
 
 googleAnalytics = "UA-97389603-2"
 
+[taxonomies]
+  status = "status"
+  tag = "tags"
+
 [params]
     title = "Welsh Technical Standards Board"
     info = "Defining standards for interoperability in health and care"
