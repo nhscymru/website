@@ -6,6 +6,9 @@ slug = ""
 externalLink = ""
 author = "Dr Mark Wardle"
 tags = ["culture"]
+aliases = [
+    "/posts/2018-04-24-standards-culture"
+]
 +++
 
 Our mission is to :
