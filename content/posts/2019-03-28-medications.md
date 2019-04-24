@@ -1,5 +1,5 @@
 +++ 
-date = 2019-03-28T19:19:19Z
+date = 2019-03-28T12:20:19Z
 title = "Modelling medications"
 description = ""
 slug = "" 
@@ -18,7 +18,8 @@ I first need to say a big thank-you to the members of the WTSB for their input t
 
 # Medicines : what problems are we trying to solve?
 
-From a personal point-of-view, prescribing is one of the most dangerous things I do, and as a full-time clinician working in a hospital setting, I currently have few tools or technology to help me work efficiently and safely. Indeed, the 'CCIO 7' include medications explicitly as one of the seven areas of priority in NHS England. 
+From a personal point-of-view, prescribing is one of the most dangerous things I do, and as a full-time clinician working in a hospital setting, I currently have few tools or technology to help me work efficiently and safely. Indeed, the 'CCIO 7' include medications
+ explicitly as one of the seven areas of priority in NHS England. 
 
 So what do we need to consider?
 
@@ -60,6 +61,7 @@ However, it is important not to misinterpret this schematic; it shows how a user
 > Excerpt From: Eric Evans. “Domain-Driven Design: Tackling Complexity in the Heart of Software”. [https://www.amazon.co.uk/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215](https://www.amazon.co.uk/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
 
 We need to truly understand our domain, and build a model of that domain - focused on its building blocks and underlying principles. That means understanding *data* and the workflows that operate using those data.
+
 
 ## Towards structured, meaningful data
 
@@ -282,6 +284,8 @@ From the HL7 FHIR medication model:
 The suggested solution is *profiling*; this is a process in which a generic model from the platform standard is adapted to specific use-cases. For example, the UK INTEROpen project has profiled medications so that medication code must be a [SNOMED CT code from the dm+d](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1), which is appropriate the UK audience.
 
 The problem with profiling is that we *still* need to agree across borders how we will adapt our models for local implementation, and this applies to both HL7 FHIR and openEHR.
+
+
 
 
 
