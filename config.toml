@@ -5,7 +5,6 @@ theme = "hugo-ananke"
 defaultcontentlanguage = "en"
 paginate = 20
 canonifyurls = true
-
 pygmentsstyle = "bw"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
@@ -29,6 +28,7 @@ googleAnalytics = "UA-97389603-2"
     favicon_16 = "/img/favicon-16x16.png"
     email = "mark@wardle.org"
     footercontent = "Maintained by Mark Wardle for the Welsh Technical Standards Board"
+    recent_posts_number = 10
 
     hidecredits = true
     hidecopyright = true
