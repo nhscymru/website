@@ -5,7 +5,7 @@ publishdate = 2019-01-01T09:00:00Z
 enddate = 2019-03-28T17:00:00Z 
 location = "Room 4.07, Welsh Government offices, Cathays Park, Cardiff"
 postcode = "CF10 3NQ"
-tags = ["medications", "drugs", "information models"]
+tags = ["medication", "drugs", "pharmacy"]
 +++
 
 # Agenda
