@@ -1,10 +1,17 @@
 ---
-type: agenda
 title: "Statement of intent, community integration and work plans"
 date: 2019-02-26T14:00:00Z
 enddate: 2019-02-26T17:00:00Z
-location: University Hospital Wales
+location: Cathays Park, Welsh Government
+postcode: CF10 3NQ
+resources:
+- src: files/doc1.txt
+  title: A test document
+- src: files/wibble.url
+  title: Draft minutes from December meeting
 ---
+
+# Agenda
 
 - Final discussions and sign off of statement of intent
 - Discussion of community and social care integration and interoperability standards 

@@ -1,0 +1,49 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+<div class="flex-l mt2 mw8 center">
+  <article class="center cf pv5 ph3 ph4-ns mw7">
+    <header>
+      <p class="f6 b helvetica tracked">
+        {{ singularize .Section | upper }}:
+        <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+          {{- .Date.Format "January 2, 2006, 15:04" -}}-{{ dateFormat "15:04" .Params.enddate }}
+        </time>
+      </p>
+      <h1 class="f1 athelas mb1">
+        {{ .Title }}
+      </h1>
+    </header>
+    <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      {{ .Content }}
+    </div>
+
+    <!-- show supporting files if there are any -->
+    {{ $files := .Resources.Match "files/*" }}
+    {{ if gt (len $files) 0}}
+    <h1 class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      Supporting files
+    </h1>
+    <ul>
+      {{ range $files}}
+      <li>
+        <a target="_blank" href="{{ .Permalink }}">
+          <i class="far fa-file-{{ .Params.icon }}"></i> 
+          {{ .Title }}
+          <small>{{ with .Params.ref }}(Ref.{{ . }}) {{ end }}</small>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+    {{end }}
+
+    {{ with .Resources.ByType "page" }}
+    {{ range . }}
+    <h3 class="mid-gray">{{ .Title }}</h3>
+    {{ .Content }}
+    {{ end }}
+    {{ end }}
+</div>
+</article>
+
+
+{{ end }}

@@ -1,0 +1,8 @@
+{{ if ne .Params.location nil }}
+{{ if ne .Params.postcode nil }}
+    <a href="https://maps.google.co.uk/maps?q={{.Params.postcode}}" target="_new">Location: </a>
+{{ else }}
+    Location:</p>
+{{ end }}
+{{ .Params.location   }}
+{{ end }}

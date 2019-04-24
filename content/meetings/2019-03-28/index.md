@@ -1,5 +1,4 @@
 +++
-type = "agenda"
 title = "Electronic prescribing standards and statement of principles sign-off"
 date = 2019-03-28T14:00:00Z
 publishdate = 2019-01-01T09:00:00Z
@@ -9,9 +8,11 @@ postcode = "CF10 3NQ"
 tags = ["medications", "drugs", "information models"]
 +++
 
-* Minutes and Actions - Doc 1
-* Presentation from e-prescribing team
-* Discussion ahead of NIMB – 11 April
+# Agenda
+
+* Minutes and Actions from [February meeting]({{< ref "/meetings/2019-02-26">}}) - see link or Document 1 in bundle
+* [Presentation from e-prescribing team](files/medicines.pptx.pdf)
+* Discussion ahead of National Informatics Management Board (NIMB) – 11 April
 * NIMB consideration of Statements of Principles - Doc 2
-* AOB
+* Any other business
 
