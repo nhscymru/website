@@ -8,6 +8,8 @@
         <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
           {{- .Date.Format "January 2, 2006, 15:04" -}}-{{ dateFormat "15:04" .Params.enddate }}
         </time>
+        {{- partial "meeting-location.html" . -}}
+
       </p>
       <h1 class="f1 athelas mb1">
         {{ .Title }}
