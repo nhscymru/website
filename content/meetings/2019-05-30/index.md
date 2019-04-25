@@ -7,6 +7,7 @@ location = "Welsh Government offices, Cathays Park, Cardiff"
 postcode = "CF10 3NQ"
 +++
 
+> *Draft agenda - to be confirmed*:
 
 1. Review of minutes from March meeting and sign-off to publish on website. Review of action log.
 2. Review of website and its backend technology including [github.com code](https://github.com/nhscymru/website) and potential (Mark Wardle)
