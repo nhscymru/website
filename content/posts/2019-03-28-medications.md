@@ -5,7 +5,6 @@ description = ""
 slug = "" 
 categories = []
 externalLink = ""
-draft = true
 author = "Dr Mark Wardle"
 tags = ["medication", "drugs", "pharmacy"]
 +++
@@ -14,14 +13,13 @@ tags = ["medication", "drugs", "pharmacy"]
 >
 > Excerpt From: Eric Evans. “Domain-Driven Design: Tackling Complexity in the Heart of Software”. [https://www.amazon.co.uk/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215](https://www.amazon.co.uk/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
 
-I first need to say a big thank-you to the members of the WTSB for their input today. We had very useful discussions and I think we all learned a lot. This blog post reflect my personal notes and thoughts from the meeting; we will, of course, make more formal minutes of the discussion public once available.
+I first need to say a big thank-you to the members of the WTSB for their input today . We had very useful discussions and I think we all learned a lot. This blog post reflect my personal notes and thoughts from the meeting; we will, of course, make more [formal minutes of the discussion public once available](/meetings/2019-03-28).
 
 # Medicines : what problems are we trying to solve?
 
-From a personal point-of-view, prescribing is one of the most dangerous things I do, and as a full-time clinician working in a hospital setting, I currently have few tools or technology to help me work efficiently and safely. Indeed, the 'CCIO 7' include medications
- explicitly as one of the seven areas of priority in NHS England. 
+From a personal point-of-view, prescribing is one of the most dangerous things I do, and as a full-time clinician working in a hospital setting, I currently have few tools or technology to help me work efficiently and safely. 
 
-So what do we need to consider?
+So what kinds of work do we need to consider?
 
 * writing prescriptions
 * managing and ordering stock
@@ -114,16 +112,15 @@ It is easy, when faced with this complexity, to think we can solve our problems 
 * we do not yet know the *best* way to valuably use technology to improve our work here. We only need to consider the widely discussed ['alert fatigue'](https://psnet.ahrq.gov/primers/primer/28/alert-fatigue) to recognise the importance of ensuring that we use technology to build a *learning* culture of continuous improvement. 
 * we need to be very cautious unless this is this a 'solved problem', for which the answers are well-understood, and the market providing solutions which have become commodities and essentially substitutable.
 * do we really think that medications can be handled by a standalone application on behalf of all others? How are we going to add analytics and integration with other sources of information (e.g how do we solve "send an alert if there if there is a problem with blood monitoring results for patients on methotrexate")
+* in short, are we going to impede innovation and ongoing improvement?
 
-And what about the purported benefits to safety and training? Surely adopting a single system means that less training will be necessary?
+And what about the purported benefits to safety and training? 
 
-* we can define wider standards for display and workflow relating to drugs (e.g. show full names and no abbreviations for dose timings) without impeding innovation (but note design is likely to be quite different for small mobile devices compared to a desktop display).
+* we can mitigate these issues by defining standards for display and workflow relating to drugs (e.g. show full names and no abbreviations for dose timings) without impeding innovation (and recognise that design is likely to be quite different for small mobile devices compared to a desktop display).
 
-The biggest issue with the 'seductive single system solution' is that embedding another application, with its own user interface, business logic, data models and storage, results in a potential combinatorial explosion of different systems which need to be integrated point-to-point to support processes and workflow. It is, quite simply, bad engineering and bad architecture.
+The biggest issue with the 'seductive single system solution' is that embedding another application, with its own user interface, business logic, data models and storage, results in a potential combinatorial explosion of different systems which need to be integrated point-to-point to support processes and workflow. 
 
 ## Simplifying complexity
-
-The trouble is, I think this work is *really difficult* and if we get it wrong, errors in medication are *dangerous*.
 
 The answer is, I think, to simplify and break down our work. 
 
@@ -157,7 +154,6 @@ Without standards, parties must engage directly with one another resulting in a 
 
 An example of the use of standards to connect disparate software is the operation of your web browser. The developers of that browser do not know the people who created the individual websites with which you interact, but instead, because of open standards, their software can exchange meaningful information with the software running on the server.
 
-
 ## Information models for medication
 
 So we can see that an information model for a medication might need to include:
@@ -179,28 +175,20 @@ Where might we need to record or find information about medication?
 * Dispensing - providing medications
 * Administration - giving medications
 
-# Medication statement
+### Medication statement
 
 We will need a statement of the medications taken by a patient at a snapshot in time. For example, we might ascertain a list when we first meet a patient. Such a step will always be needed, even in the unlikely event that all professionals involved in the care of that patient use the same electronic system, in case the patient has discontinued a drug or started a new over-the-counter remedy. 
 
 That's not to say that software cannot help this important reconciliation and review step; a list of medications could be presented for review sourced from all authoritative sources in order to improve safety and efficiency. 
 
-In essence, the medication statement is akin to the list of medications written down on paper during a hospital admission. When using paper, lists of medications might appear in a letter from the primary care physician, and in numerous duplicate places during admission and subsequent assessment; by nursing, medical staff as well as documents recorded by allied health professionals. At the moment, a single piece of paper cannot be in more than two places at the same time, so that means duplication and redundancy. Which is the 'truth'? The record by the doctor or the nurse in the emergency department, the ward nurse, or the specialist doctor, or none of the above? 
-
-From an informatics point-of-view, the inherent implicit redundancy is fascinating, particularly when we consider how to digitise the process. In effect, digitisation should force us to start to unpick and understand our processes, breaking them into their core steps and allowing us to re-imagine those processes given the tools we now have available to us. 
-
-To be successful, we need to make the tacit, implicit rules explicit and handle the contradictions and oddities that have evolved in our 'systems', often as a result of the strengths and limitations inherent in the use of paper.
-
 ### An order - prescribing medications
 
-Likewise, we need to be able to request medication; a medication order, in which a prescriber orders medication for a patient. This is akin to prescribing on a paper chart, after writing down the list of medications during the process of admitting a patient to hospital. So which list should be the authoritative source of medications that should be prescribed? 
-
+We need to be able to request medication; a medication order, in which a prescriber orders medication for a patient. This is akin to prescribing on a paper chart, after writing down the list of medications during the process of admitting a patient to hospital. So which list should be the authoritative source of medications that should be prescribed? 
 Once we have decided what to prescribe, those drugs need to be prescribed and those instructions need to be recorded in an appropriate information model.
 
 ### Dispensing - providing medications
 
 When a medication is prescribed on a ward, a complex set of processes begin. Is the drug stocked on the ward? Does it need to be ordered from pharmacy? Has the patient brought in their own medication? Such information needs to handle the dispensing of the medication to the appropriate location, linking with stock ordering and control systems.
-
 
 ### Administration - giving medications
 
@@ -208,14 +196,26 @@ When a medication is given by a professional to a patient, such as an intravenou
 
 ## Process / workflow models for medication
 
-So we can see, even with a very simple analysis, how we use, manage, record and process medications for patients is complex. Many of the workflows are quite standardised between different care environments, but others are highly variable. It is useful to consider the 'edge-cases'; in healthcare, *edge-cases are common*. 
+In essence, the medication statement is akin to the list of medications written down on paper during a hospital admission. When using paper, lists of medications might appear in a letter from the primary care physician, and in numerous duplicate places during admission and subsequent assessment; by nursing, medical staff as well as documents recorded by allied health professionals. At the moment, a single piece of paper cannot be in more than two places at the same time, so that means duplication and redundancy. Which is the 'truth'? The record by the doctor or the nurse in the emergency department, the ward nurse, or the specialist doctor, or none of the above? 
+
+From an informatics point-of-view, the inherent implicit redundancy is fascinating, particularly when we consider how to digitise the process. In effect, digitisation should force us to start to unpick and understand our processes, breaking them into their core steps and allowing us to re-imagine those processes given the tools we now have available to us. 
+
+To be successful, we need to:
+
+* make tacit, implicit rules explicit
+* handle the contradictions and oddities that have evolved in our 'systems'
+
+and recognise that many of our tacit rules and oddities have arisen as a result of the strengths and limitations inherent in our use of *paper*.
+
+We can see, even with a very simple analysis, how we use, manage, record and process medications for patients is complex. 
+
+Many of the workflows are quite standardised between different care environments, but others are highly variable. It is useful to consider the 'edge-cases'; in healthcare, *edge-cases are common*. 
 
 Consider the differences between the following clinical environments:
 
 * prescribing and administration on the intensive care unit vs. nursing home resident
 * chemotherapy prescribing vs. regular repeated medication prescriptions for long-term health conditions
 * emergency unit prescribing vs. a palliative care plan
-
 
 > “It is with this move beyond entities and values that knowledge crunching can get intense, because there may be actual inconsistency among business rules. Domain experts are usually not aware of how complex their mental processes are as, in the course of their work, they navigate all these rules, reconcile contradictions, and fill in gaps with common sense. Software can’t do this. It is through knowledge crunching in close collaboration with software experts that the rules are clarified, fleshed out, reconciled, or placed out of scope.”
 >
@@ -256,12 +256,12 @@ That means structuring information so that we can build software to support work
 
 In my opinion, it is easier to write software that processes data as a FHIR resource because it is mostly explicit and  developer-orientated. While I love the two-level modelling paradigm in openEHR, software cannot always simply handle archetypes in a generic way. The openEHR architectural review recognises this issue:
 
-> "Clearly applications cannot always be totally generic (although many data capture and viewing applications are); decision support, administrative, scheduling and many other applications still require custom engineering. However, all such applications can now rely on an archetype- and templatedriven computing platform. A key result of this approach is that archetypes now constitute a technology- independent, single-source expression of domain semantics, used to drive database schemas, software logic, GUI screen definitions, message schemas and all other technical expressions of the semantics."
+> "Clearly applications cannot always be totally generic (although many data capture and viewing applications are); decision support, administrative, scheduling and many other applications still require custom engineering. However, all such applications can now rely on an archetype- and template driven computing platform. A key result of this approach is that archetypes now constitute a technology- independent, single-source expression of domain semantics, used to drive database schemas, software logic, GUI screen definitions, message schemas and all other technical expressions of the semantics."
 >
 > [openEHR architectural review](https://specifications.openehr.org/releases/BASE/Release-1.0.3/architecture_overview.html#_consequences_for_software_engineering)
 
 
-There are ways of handling these issues, but both openEHR and HL7 FHIR can also make computability more difficult by being too flexible on their use of coding and ontology. That means that both usually fail to specify explicitly which coding system to use, recognising the need for flexibility in usage across territories and environments. Both *bind* terminologies in a flexible manner. 
+There are ways of handling these issues, but both openEHR and HL7 FHIR can also make computability more difficult by being *too flexible* on their use of coding and ontology. That means that both usually fail to specify explicitly which coding system to use, recognising the need for flexibility in usage across territories and environments. Both *bind* terminologies in a flexible manner. 
 
 From the openEHR medication archetype:
 
@@ -279,12 +279,36 @@ From the HL7 FHIR medication model:
 >
 > [https://www.hl7.org/fhir/medication-definitions.html#Medication.code](https://www.hl7.org/fhir/medication-definitions.html#Medication.code)
 
+This flexibility is both a strength and a weakness. In order to be interoperable, we need to be opinionated on how such terms are coded. I will not be able to exchange meaningful information with you, and use that information for computation, if I expect SNOMED CT dm+d codes and you expect RxNorm, even if we both use HL7 FHIR.
+
 ### Profiling
 
 The suggested solution is *profiling*; this is a process in which a generic model from the platform standard is adapted to specific use-cases. For example, the UK INTEROpen project has profiled medications so that medication code must be a [SNOMED CT code from the dm+d](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1), which is appropriate the UK audience.
 
-The problem with profiling is that we *still* need to agree across borders how we will adapt our models for local implementation, and this applies to both HL7 FHIR and openEHR.
+The problem with profiling is that we *still* need to agree across borders how we will adapt our models for local implementation, and this applies to both HL7 FHIR and openEHR. That means building in cooperation and collaboration - across all organisations in health and care, inside and outside, of Wales. We must align those profiles with our partner organisations in order to appropriately exchange meaningful information relating to medication and manage workflows across organisational boundaries.
 
+# Conclusions
+
+* we need a deep understanding of our domain and the workflows/processes that are involved in medications
+* in general, the technical aspects are *not* the difficult bit - and there is considerable alignment between models in HL7 FHIR and openEHR already. 
+* technical standards are *not* something that can be defined separately to the business of solving problems; indeed, standards are a key foundation in empowering cultural change and digital transformation, and that is everyone's business.
+* work on technical standards must be done in *partnership* and *collaboration*, across health and care, involving internal and external stakeholders, inside and outside of Wales. 
+* we need to build links with our partners and create a *learning culture*.
+* our adoption of technical standards will need continual work and ongoing maintenance and review. 
+
+And specifically in Wales,
+
+* we must ensure appropriate technical standards are mandated for new information systems dealing with medications and their management; the WHEPPMA project should be explicit in adopting a standards-based approach.
+* we must provide a strong steer to our industry partners that we are moving to a non-proprietary open standards-based approach to medications (and health and care information systems in general)
+* we must work with colleagues in other nations and specifically ensure adequate representation for Wales in standards organisations, for example NHS Digital, NHSX and INTEROpen, to align information and process models.
+* we should move towards an *open platform*, in which data and the applications that use those data are separate and connected via defined open application programming interfaces.
+* in principle, we would adopt HL7 FHIR for exchanging information relating to medications.
+ 
+And we should ask:
+
+* what can we do now that ensures rigorous evaluation and monitoring of our technology deployments, and be more open and transparent in explaining what learn in solving the problems we face in health and care information technology?
+
+*Mark*
 
 
 
