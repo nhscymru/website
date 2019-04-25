@@ -4,11 +4,6 @@ date: 2019-02-26T14:00:00Z
 enddate: 2019-02-26T17:00:00Z
 location: Cathays Park, Welsh Government
 postcode: CF10 3NQ
-resources:
-- src: files/doc1.txt
-  title: A test document
-- src: files/wibble.url
-  title: Draft minutes from December meeting
 ---
 
 # Agenda
