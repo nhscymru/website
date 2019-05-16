@@ -30,6 +30,8 @@ googleAnalytics = "UA-97389603-2"
     footercontent = "Maintained by Mark Wardle for the Welsh Technical Standards Board"
     recent_posts_number = 10
 
+    custom_css = ["custom.css"]
+
     hidecredits = true
     hidecopyright = true
     show_reading_time = false
